@@ -15,8 +15,6 @@ server.use(express.static('./public'));
 
 server.post('/auth/login', (req: Request, res: Response) => {
 
-    console.log(req.body);
-
     const clientEmail = req.body.email;
     const clientPassword = req.body.password;
 
