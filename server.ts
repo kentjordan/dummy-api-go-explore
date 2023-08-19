@@ -44,7 +44,7 @@ server.post('/auth/login', (req: Request, res: Response) => {
 });
 
 server.post('/images', upload.single('image'), (req: Request, res: Response) => {
-    res.status(200).json({ url: `http://localhost:3001/images/${req.file?.filename}` });
+    res.status(201).json({ url: `http://localhost:3001/images/${req.file?.filename}` });
 });
 
 server.listen(3001, () => {
